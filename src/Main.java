@@ -22,6 +22,14 @@ public class Main {
         System.out.print("\nAverage of the grades: " + average);
 
         //3
+        int[] rgrades=GradeManager.getRounded(grades);
+        System.out.print("\nRounded grades: ");
+        for (int grade : rgrades) {
+            System.out.print(grade + " ");
+
+        }
+
+
     }
 
 }

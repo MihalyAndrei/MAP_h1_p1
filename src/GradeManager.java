@@ -32,8 +32,21 @@ public class GradeManager {
     }
 
     public static int[] getRounded(int[] grades) {
-        //...
-        return new int[0];
+        int count=grades.length+1;
+        for(int grade:grades){
+            if(grade<40){
+                count--;
+            }
+        }
+        int[] rgrades=new int[count];
+        int index=0;
+        for (int grade:grades) {
+            int multiple=((grade/5)+1)*5;
+            if (grade>=38 && multiple-grade<38){
+                rgrades[index++]=multiple;
+            }
+        }
+        return rgrades;
     }
 
     public static int getMaxRounded(int[] grades) {
