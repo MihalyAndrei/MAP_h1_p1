@@ -1,8 +1,25 @@
 public class GradeManager {
 
     public static int[] getFailedGrades(int[] grades) {
-        //...
-        return new int[0];
+        if(grades==null){
+            return new int[0];
+        }
+        int count=0;
+        for (int grade : grades) {
+            if (grade <40){
+                count++;
+            }
+        }
+
+        int[] failedGrades=new int[count];
+        int index=0;
+        for(int grade:grades){
+            if(grade<40){
+                failedGrades[index++]=grade;
+            }
+        }
+
+        return failedGrades;
     }
 
 
