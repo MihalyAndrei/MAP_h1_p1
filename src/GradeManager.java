@@ -50,7 +50,13 @@ public class GradeManager {
     }
 
     public static int getMaxRounded(int[] grades) {
-        //...
-        return 0;
+        int[] rgrades=getRounded(grades);
+        int max=rgrades[1];
+        for (int rgrade:rgrades){
+            if (rgrade>max){
+                max=rgrade;
+            }
+        }
+        return max;
     }
 }

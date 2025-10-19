@@ -1,6 +1,11 @@
 public class Main {
     public static void main(String[] args) {
+        System.out.print("Grades:");
         int[] grades = {29, 37, 38, 41, 84, 67};
+        for (int grade : grades) {
+            System.out.print(grade+" ");
+        }
+        System.out.print("\n");
         if(grades==null || grades.length==0){
             System.out.print("No grades found");
             return;
@@ -29,7 +34,9 @@ public class Main {
 
         }
 
-
+        //4
+        int max=GradeManager.getMaxRounded(grades);
+        System.out.print("\nThe highest rounded grade is " + max);
     }
 
 }
