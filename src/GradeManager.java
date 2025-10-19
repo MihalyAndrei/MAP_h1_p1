@@ -1,9 +1,6 @@
 public class GradeManager {
 
     public static int[] getFailedGrades(int[] grades) {
-        if(grades==null){
-            return new int[0];
-        }
         int count=0;
         for (int grade : grades) {
             if (grade <40){
@@ -24,9 +21,6 @@ public class GradeManager {
 
 
     public static double getAverage(int[] grades) {
-        if (grades==null){
-            return 0.0;
-        }
         int count=0;
         double avg=0;
         for (int grade:grades){
