@@ -24,8 +24,17 @@ public class GradeManager {
 
 
     public static double getAverage(int[] grades) {
-        //...
-        return 0.0;
+        if (grades==null){
+            return 0.0;
+        }
+        int count=0;
+        double avg=0;
+        for (int grade:grades){
+            avg+=grade;
+            count++;
+        }
+
+        return Math.round(avg/count);
     }
 
     public static int[] getRounded(int[] grades) {
