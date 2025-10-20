@@ -38,5 +38,4 @@ public class Main {
         int max=GradeManager.getMaxRounded(grades);
         System.out.print("\nThe highest rounded grade is " + max);
     }
-
 }
